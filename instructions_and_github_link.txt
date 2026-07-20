@@ -1,0 +1,93 @@
+================================================
+Lien GitHub et Instructions du Projet Argent Bank
+================================================
+
+Ce fichier contient le lien vers le dépôt GitHub du projet ainsi que le contenu du fichier README, détaillant les étapes nécessaires pour installer et lancer l'application. Ceci confirme que toutes les exigences de la phase 1 (Authentification de l'utilisateur) sont remplies.
+
+-- LIEN GITHUB --
+
+Le code source complet de ce projet est disponible sur GitHub au lien suivant :
+
+https://github.com/KOUAMLAN
+
+
+-- INSTRUCTIONS (Contenu du README.md) --
+
+# Projet Argent Bank
+
+Ce projet contient le frontend et le backend complets pour l'application Argent Bank, une plateforme moderne pour la gestion des finances personnelles.
+
+## Structure du projet
+
+- `/`: Contient l'application frontend React construite avec Vite.
+- `/backend`: Contient le serveur d'API Node.js/Express.
+
+---
+
+## Configuration du Backend
+
+Le serveur backend fournit des points de terminaison d'API pour l'authentification des utilisateurs et la gestion de leur profil.
+
+### Prérequis
+
+- [Node.js](https://nodejs.org/) (version 16 ou ultérieure)
+- npm (fourni avec Node.js)
+
+### Installation & Lancement
+
+1.  **Naviguez vers le répertoire backend :**
+    ```bash
+    cd backend
+    ```
+
+2.  **Installez les dépendances :**
+    ```bash
+    npm install
+    ```
+
+3.  **Démarrez le serveur :**
+    ```bash
+    npm start
+    ```
+
+Le serveur démarrera sur `http://localhost:3001`.
+Vous pouvez consulter la documentation de l'API via Swagger à l'adresse `http://localhost:3001/api-docs`.
+
+---
+
+## Configuration du Frontend
+
+Le frontend est une application monopage (SPA) construite avec React, Redux, et Tailwind CSS.
+
+### Prérequis
+
+- [Node.js](https://nodejs.org/) (version 16 ou ultérieure)
+- npm (fourni avec Node.js)
+
+### Installation & Lancement
+
+1.  **Naviguez vers le répertoire racine du projet** (où se trouve ce README).
+
+2.  **Installez les dépendances :**
+    ```bash
+    npm install
+    ```
+
+3.  **Démarrez le serveur de développement :**
+    ```bash
+    npm run dev
+    ```
+
+L'application s'ouvrira dans votre navigateur à l'adresse `http://localhost:5173` (ou un autre port si le 5173 est déjà utilisé).
+
+---
+
+## Comment utiliser l'application
+
+1.  Assurez-vous que les serveurs backend et frontend sont tous les deux en cours d'exécution.
+2.  Ouvrez `http://localhost:5173` dans votre navigateur.
+3.  Cliquez sur "Sign In".
+4.  Utilisez les identifiants suivants pour vous connecter :
+    -   **Username:** `tony@stark.com`
+    -   **Password:** `P@ssword123!`
+5.  Une fois connecté, vous serez redirigé vers votre page de profil où vous pourrez voir vos comptes et modifier votre nom d'utilisateur.

@@ -1,0 +1,5 @@
+{
+  "name": "Argent Bank",
+  "description": "A modern banking dashboard using React, Redux, and TypeScript.",
+  "requestFramePermissions": []
+}
