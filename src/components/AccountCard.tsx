@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface AccountCardProps {
   id: string;
@@ -9,7 +8,12 @@ interface AccountCardProps {
   description: string;
 }
 
-const AccountCard: React.FC<AccountCardProps> = ({ id, title, amount, description }) => {
+const AccountCard: React.FC<AccountCardProps> = ({
+  id,
+  title,
+  amount,
+  description,
+}) => {
   const navigate = useNavigate();
 
   const handleTransactionClick = () => {
@@ -17,15 +21,102 @@ const AccountCard: React.FC<AccountCardProps> = ({ id, title, amount, descriptio
   };
 
   return (
-    <section className="flex justify-between items-center bg-[#343a40] text-white p-6 mb-6 w-full rounded-md shadow-sm box-border">
-      <div className="text-left flex-1">
-        <h3 className="m-0 text-base md:text-lg font-normal">{title}</h3>
-        <p className="m-0 text-[2.5rem] font-bold my-2">{amount}</p>
-        <p className="m-0 text-base font-normal">{description}</p>
-      </div>
-      <div className="flex items-center cursor-pointer px-4" onClick={handleTransactionClick}>
-        {/* Grande flèche blanche (Chevron) cliquable */}
-        <i className="fa-solid fa-chevron-right text-4xl md:text-5xl text-white hover:text-[#00bc77] transition-colors"></i>
+    <section
+      className="
+        w-full
+        bg-[#343a40]
+        text-white
+        rounded-md
+        shadow-sm
+        p-5
+        sm:p-6
+        mb-6
+      "
+    >
+      <div
+        className="
+          flex
+          flex-col
+          md:flex-row
+          md:items-center
+          md:justify-between
+          gap-5
+        "
+      >
+        <div className="flex-1 min-w-0">
+
+          <h3
+            className="
+              text-base
+              sm:text-lg
+              font-normal
+              break-words
+            "
+          >
+            {title}
+          </h3>
+
+          <p
+            className="
+              text-3xl
+              sm:text-4xl
+              md:text-5xl
+              font-bold
+              my-3
+              break-words
+            "
+          >
+            {amount}
+          </p>
+
+          <p
+            className="
+              text-sm
+              sm:text-base
+            "
+          >
+            {description}
+          </p>
+
+        </div>
+
+
+        <button
+          type="button"
+          onClick={handleTransactionClick}
+          className="
+            w-full
+            md:w-auto
+            self-center
+            flex
+            items-center
+            justify-center
+            gap-3
+            bg-[#00bc77]
+            hover:bg-[#009e60]
+            active:scale-95
+            transition
+            rounded-md
+            px-5
+            py-3
+            min-h-[44px]
+            font-bold
+            touch-manipulation
+          "
+        >
+          View transactions
+
+          <i
+            className="
+              fa-solid
+              fa-chevron-right
+              text-xl
+            "
+            aria-hidden="true"
+          />
+
+        </button>
+
       </div>
     </section>
   );
