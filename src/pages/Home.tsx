@@ -63,7 +63,6 @@ const Home: React.FC = () => {
       </div>
 
       <section className="flex flex-col md:flex-row bg-white py-12">
-
         <h2 className="sr-only">Features</h2>
 
         {features.map((feature) => (
@@ -75,9 +74,7 @@ const Home: React.FC = () => {
             description={feature.description}
           />
         ))}
-
       </section>
-
     </main>
   );
 };
