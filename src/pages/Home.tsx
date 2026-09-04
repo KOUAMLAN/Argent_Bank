@@ -11,7 +11,7 @@ const Home: React.FC = () => {
     {
       id: 1,
       iconUrl: chatIcon,
-      altText: "Chat Icon",
+      altText: "Chat",
       title: "You are our #1 priority",
       description:
         "Need to talk to a representative? You can get in touch through our 24/7 chat or through a phone call in less than 5 minutes.",
@@ -19,7 +19,7 @@ const Home: React.FC = () => {
     {
       id: 2,
       iconUrl: moneyIcon,
-      altText: "Money Icon",
+      altText: "Money",
       title: "More savings means higher rates",
       description:
         "The more you save with us, the higher your interest rate will be!",
@@ -27,7 +27,7 @@ const Home: React.FC = () => {
     {
       id: 3,
       iconUrl: securityIcon,
-      altText: "Security Icon",
+      altText: "Security",
       title: "Security you can trust",
       description:
         "We use top of the line encryption to make sure your data and money is always safe.",
@@ -36,33 +36,34 @@ const Home: React.FC = () => {
 
   return (
     <main className="flex-1">
-      <div
-        className="relative h-[300px] md:h-[400px] bg-cover bg-no-repeat bg-[#12002b]"
+      <section
+        className="relative min-h-[300px] bg-cover bg-center bg-no-repeat sm:min-h-[400px]"
         style={{
           backgroundImage: `url(${bankTreeImage})`,
-          backgroundPosition: "center",
         }}
       >
-        <section className="absolute top-8 right-8 w-[200px] md:w-[300px] bg-white p-8 shadow-md">
-          <h2 className="sr-only">Promoted Content</h2>
+        <div className="absolute right-4 top-8 w-[280px] bg-white p-8 shadow-md sm:right-8 sm:w-[360px]">
+          <h1 className="sr-only">Argent Bank</h1>
 
-          <p className="font-bold text-xl">No fees.</p>
+          <p className="text-xl font-bold">
+            No fees.
+          </p>
 
-          <p className="font-bold text-xl">
+          <p className="text-xl font-bold">
             No minimum deposit.
           </p>
 
-          <p className="font-bold text-xl">
+          <p className="text-xl font-bold">
             High interest rates.
           </p>
 
           <p className="mt-4">
             Open a savings account with Argent Bank today!
           </p>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <section className="flex flex-col md:flex-row bg-white py-12">
+      <section className="flex flex-col bg-white py-12 md:flex-row">
         <h2 className="sr-only">Features</h2>
 
         {features.map((feature) => (

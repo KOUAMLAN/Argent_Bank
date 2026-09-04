@@ -3,13 +3,13 @@ import logo from "../assets/img/argentBankLogo.png";
 
 const ArgentBankLogo: React.FC = () => {
   return (
-    <div className="flex items-center">
-      <img
-        className="max-w-[200px] w-full"
-        src={logo}
-        alt="Argent Bank Logo"
-      />
-    </div>
+    <img
+      src={logo}
+      alt="Argent Bank"
+      width="200"
+      height="50"
+      className="block w-[200px] h-auto"
+    />
   );
 };
 
